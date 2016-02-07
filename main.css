@@ -199,7 +199,7 @@ main {
 }
 
 .top-news__item:before {
-  content: "Â» ";
+  content: "Ã‚Â» ";
 }
 
 .top-news__item:last-child {
@@ -283,6 +283,12 @@ main {
   padding: 1em;
   max-width: 100%;
   display: inline-flex;
+}
+
+@media screen and print and (max-width:480px) {
+  .weather {
+    flex-wrap: wrap;
+  }
 }
 
 .weather__location {
