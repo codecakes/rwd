@@ -10,7 +10,11 @@ body {
   font-size: 1em;
   color: #424242;
 }
-
+btn, button, a {
+  display:block;
+  min-width: 48px;
+  min-height: 48px;
+}
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
@@ -182,7 +186,6 @@ main {
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
-  max-width: 100%;
   position: relative;
 }
 
@@ -200,7 +203,7 @@ main {
 }
 
 .top-news__item:before {
-  content: "Ãƒâ€šÃ‚Â» ";
+  content: "» ";
 }
 
 .top-news__item:last-child {
