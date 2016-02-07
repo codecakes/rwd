@@ -10,10 +10,9 @@ body {
   font-size: 1em;
   color: #424242;
 }
-a[href] {
+a {
   display: block;
-  min-width: 48px;
-  min-height: 48px;
+  padding: 1.5em;
 }
 h1, h2, h3, h4, h5 {
   margin: 0;
