@@ -11,10 +11,6 @@ body {
   color: #424242;
 }
 
-a {
-  padding: 1.5em;
-}
-
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
@@ -114,6 +110,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -394,4 +391,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
 }
