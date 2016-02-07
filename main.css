@@ -10,7 +10,7 @@ body {
   font-size: 1em;
   color: #424242;
 }
-a {
+a[href] {
   display: block;
   min-width: 48px;
   min-height: 48px;
