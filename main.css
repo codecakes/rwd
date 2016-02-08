@@ -10,7 +10,12 @@ body {
   font-size: 1em;
   color: #424242;
 }
-
+@media only print and (min-width:1280px), screen and (min-width:1280px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+  
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
@@ -104,6 +109,31 @@ ul {
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+/*hidden by default*/
+.nav__trigram {
+  visibility: collapse;
+  transform: translate(-300px, 0);
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+/*for small screen sizes burger menu works
+and normal menu disappears
+*/
+@media only print and (max-width:408px), screen and (max-width:408px) {
+  .nav__list {
+    display:none;
+  }
+  .trigram-small {
+    display:inline-flex;
+  }
+}
+
+@media only print and (min-width:409px), screen and (min-width:409px) {
+  .trigram-small, .nav__trigram {
+    display:none;
+  }
 }
 
 .nav__item {
@@ -293,7 +323,7 @@ main {
  */
 
 .weather {
-  float: right;
+  /*float: right;*/
   width: 100%;
   padding: 1em;
   max-width: 100%;
@@ -303,11 +333,41 @@ main {
   order: 5;
 }
 
-@media only print and (max-width:480px), screen and (max-width:480px) {
+@media only print and (max-width:661px), screen and (max-width:661px) {
   .weather {
+    display: inline-flex;
     flex-wrap: wrap;
   }
 }
+
+/*@media only print and (min-width:481px) and (max-width:693px), screen and (min-width:481px) and (max-width:693px) {*/
+/*  .weather {*/
+/*    display: inline-block;*/
+/*  }*/
+/*}*/
+
+@media only print and (min-width:1000px), screen and (min-width:1000px) {
+  .weather {
+    width: 746px;
+    flex-wrap: nowrap;
+    margin: 1em;
+    left: 15em;
+    right: 15em;
+    clear: both;
+    position: relative;
+  }
+  .weather__location {
+      display: flex;
+      flex-wrap: wrap;
+      font-weight: 300;
+      font-size: 1.5em;
+      clear: both;
+  }
+  .weather__next {
+    display: inline-table;
+  }
+}
+
 
 .weather__location {
   display: inline-flex;
@@ -317,10 +377,11 @@ main {
 }
 
 .weather__desc {
+
   display: block;
   font-size: 1.2em;
   float: left;
-  position: absolute;
+  position: relative;
 }
 
 .weather__today {
