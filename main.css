@@ -10,7 +10,7 @@ body {
   font-size: 1em;
   color: #424242;
 }
-@media only print and (min-width:1280px), screen and (min-width:1280px) {
+@media only print and (min-width:1440px), screen and (min-width:1440px) {
   body {
     font-size: 1.5em;
   }
