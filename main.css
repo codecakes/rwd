@@ -74,6 +74,8 @@ ul {
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
+  order: 1;
+  flex: inherit;
 }
 
 
@@ -89,6 +91,13 @@ ul {
   margin-right: auto;
   position: relative;
   text-align: justify;
+}
+
+@media only print and (min-width:693px), screen and (min-width:693px) {
+  .nav {
+    width: 693px;
+    display: block;
+  }
 }
 
 .nav__list {
@@ -155,6 +164,7 @@ main {
   background-size: cover;
   height: 370px;
   display: inline-flex;
+  order: 2;
 }
 
 .hero article {
@@ -183,6 +193,8 @@ main {
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
   position: relative;
+  flex-wrap: wrap;
+  order: 3;
 }
 
 .news__title {
@@ -190,6 +202,7 @@ main {
   border-bottom: 1px solid #E0E0E0;
   line-height: 24px;
   font-size: 2em;
+  display: inline;
 }
 
 .top-news__item {
@@ -199,7 +212,7 @@ main {
 }
 
 .top-news__item:before {
-  content: "Ã‚Â» ";
+  content: "»";
 }
 
 .top-news__item:last-child {
@@ -230,6 +243,8 @@ main {
   position: relative;
   display: inline-flex;
   max-width: 100%;
+  flex-wrap: wrap;
+  order: 4;
 }
 
 .scores__table {
@@ -283,9 +298,12 @@ main {
   padding: 1em;
   max-width: 100%;
   display: inline-flex;
+  position: relative;
+  flex-wrap: inherit;
+  order: 5;
 }
 
-@media screen and print and (max-width:480px) {
+@media only print and (max-width:480px), screen and (max-width:480px) {
   .weather {
     flex-wrap: wrap;
   }
@@ -350,6 +368,9 @@ main {
   position: relative;
   font-size: 1em;
   max-width: 100%;
+  display: inline-block;
+  flex-wrap: wrap;
+  order: 6;
 }
 
 .snippet {
@@ -388,6 +409,10 @@ footer {
   border-top: 1px solid #E0E0E0;
   padding: 1em;
   width: 100%;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  order: 7;
 }
 
 footer li {
